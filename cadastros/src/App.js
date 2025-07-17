@@ -43,6 +43,7 @@ return (
 
 <form onSubmit={handleSubmit}>
 
+<>
 <input
 type="text"
 name="nome"
@@ -51,16 +52,18 @@ value={form.nome}
 onChange={handleChange}
 required
 />
+</>
 
+<>
 <input
 type="text"
 name="sobrenome"
-placeholder="Sobre Nome"
+placeholder="Sobrenome"
 value={form.sobrenome}
 onChange={handleChange}
 required
 />
-
+</>
 <input
 type="text"
 name="cpf"
