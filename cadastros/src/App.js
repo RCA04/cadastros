@@ -27,6 +27,11 @@ function formatarTelefone(value) {
     .slice(0, 15);
 }
 
+function formatarNome(value) {
+  return value
+    .replace(/[0-9]/g, '')
+}
+
 
 const [mensagem, setMensagem] = useState("");
 
@@ -41,6 +46,14 @@ if (name === 'cpf'){
 
 if (name === 'telefone'){
   valorFormatado = formatarTelefone(value)
+}
+
+if (name === 'nome'){
+  valorFormatado = formatarNome(value)
+}
+
+if (name === 'sobrenome'){
+  valorFormatado = formatarNome(value)
 }
 
 setForm({ ...form, [e.target.name]: valorFormatado });
