@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 
 function Lista(){
@@ -16,8 +17,44 @@ useEffect(()=>{
 }, [])
 
     return(
-        <div>
+        <div className="containerList">
+            
+            <div className="title">
+            <h1>Usuários</h1>
+            </div>
 
+            <div className="listTitles">
+                <p>Nome:</p>
+                <p>Sobrenome</p>
+                <p>Telefone:</p>
+            </div>
+
+            <ul>
+            {usuarios.map((user,i)=>(
+                <li key={i}>
+                    <div className="userItem">
+                        <p>
+                        {user.nome}
+                        </p>
+
+                        <p>
+                        {user.sobrenome}
+                        </p>
+                        
+                        <p>
+                        {user.telefone}
+                        </p>
+
+                    </div>
+                </li>
+            ))}
+            </ul>
+           
+            <div className="usersLink">
+                <div className="buttonLink">
+            <Link to='/'>Retornar ao Registro</Link>
+                </div>
+            </div>
         </div>
     )
 }
