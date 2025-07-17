@@ -11,7 +11,7 @@ body {
   background-color: #ffffff;
   padding: 30px 40px;
   border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* shadow-box clara */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   width: 100%;
   max-width: 400px;
   box-sizing: border-box;
@@ -58,6 +58,7 @@ button:hover {
 }
 
 p {
+  font-size: 12px;
   text-align: center;
   margin-top: 15px;
   color: #333;

@@ -9,9 +9,41 @@ cpf: "",
 telefone: "",
 });
 
+
+function formatarCPF(value) {
+  return value
+    .replace(/\D/g, '')
+    .replace(/(\d{3})(\d)/, '$1.$2') 
+    .replace(/(\d{3})(\d)/, '$1.$2') 
+    .replace(/(\d{3})(\d{1,2})$/, '$1-$2');
+}
+
+
+function formatarTelefone(value) {
+  return value
+    .replace(/\D/g, '')
+    .replace(/^(\d{2})(\d)/g, '($1) $2') 
+    .replace(/(\d{5})(\d)/, '$1-$2') 
+    .slice(0, 15);
+}
+
+
 const [mensagem, setMensagem] = useState("");
+
 const handleChange = (e) => {
-setForm({ ...form, [e.target.name]: e.target.value });
+const {name, value} = e.target;
+
+let valorFormatado = value;
+
+if (name === 'cpf'){
+  valorFormatado = formatarCPF(value)
+}
+
+if (name === 'telefone'){
+  valorFormatado = formatarTelefone(value)
+}
+
+setForm({ ...form, [e.target.name]: valorFormatado });
 };
 
 const handleSubmit = async (e) => {
@@ -43,7 +75,6 @@ return (
 
 <form onSubmit={handleSubmit}>
 
-<>
 <input
 type="text"
 name="nome"
@@ -52,9 +83,7 @@ value={form.nome}
 onChange={handleChange}
 required
 />
-</>
 
-<>
 <input
 type="text"
 name="sobrenome"
@@ -63,15 +92,14 @@ value={form.sobrenome}
 onChange={handleChange}
 required
 />
-</>
 <input
 type="text"
 name="cpf"
 placeholder="CPF"
 value={form.cpf}
 onChange={handleChange}
-minLength='11'
-maxLength='11'
+minLength='14'
+maxLength='14'
 required
 />
 
@@ -81,8 +109,8 @@ name="telefone"
 placeholder="Telefone"
 value={form.telefone}
 onChange={handleChange}
-minLength='11'
-maxLength='11'
+minLength='15'
+maxLength='15'
 required
 />
 
