@@ -1,13 +1,18 @@
 import { useState } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
-function App() {
+function Registro() {
+
+const api = process.env.REACT_APP_API_URL
+
 const [form, setForm] = useState({
 nome: "",
 sobrenome: "",
 cpf: "",
 telefone: "",
 });
+
 
 
 function formatarCPF(value) {
@@ -62,7 +67,7 @@ setForm({ ...form, [e.target.name]: valorFormatado });
 const handleSubmit = async (e) => {
 e.preventDefault();
 try {
-await axios.post("http://localhost:8000/api/pessoas", form);
+await axios.post(api, form);
 
 setMensagem("Pessoa cadastrada com sucesso!");
 
@@ -128,13 +133,16 @@ required
 />
 
 <button type="submit">Cadastrar</button>
-
 </form>
 
+<div className="buttonLink">
+  <Link to='/usuarios'>Visualizar usuários cadastrados</Link>
+</div>
+
 {mensagem && <p>{mensagem}</p>}
-    </div> 
+</div> 
     
 );}
 
 
-export default App;
+export default Registro;

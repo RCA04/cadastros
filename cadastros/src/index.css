@@ -50,6 +50,8 @@ button {
   border-radius: 6px; 
   font-size: 16px;
   cursor: pointer;
+  transition: background-color 1s, border 1s, box-shadow 1s ;
+
 }
 
 button:hover {
@@ -65,3 +67,77 @@ p {
   font-weight: bold;
 }
 
+.userItem{
+  display: flex;
+  justify-content: space-between;
+}
+
+ul{
+  list-style-type: none;
+  padding: 0px;
+}
+
+.containerList{
+  background-color: #ffffff;
+  padding: 30px 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  width: 500px;
+  box-sizing: border-box;
+}
+
+
+.title{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+
+.usersLink{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+
+
+.listTitles{
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.buttonLink{
+  border: solid 3px #00bcd4;
+  border-radius: 3px;
+  background-color: #00bcd4;
+  transition: background-color 1s, border 1s, box-shadow 1s ;
+  margin-top: 10px;
+}
+
+.buttonLink:hover{
+  background-color:#00acc1 ;
+  border: solid 3px #00acc1;
+  box-shadow: 1px 1px 1px 3px #ccc;
+}
+
+
+.buttonLink a:link{
+  text-decoration: none;
+  color: #fff;
+}
+.buttonLink a:visited{
+  text-decoration: none;
+  color: #fff;
+
+}
+.buttonLink a:hover{
+  text-decoration: none;
+  color: #fff;
+
+}
+.buttonLink a:active{
+  text-decoration: none;
+  color: #fff;
+}
