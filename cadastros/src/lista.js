@@ -1,13 +1,14 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-
+import deleteUSer from "./modals/deleteUser/deleteUser";
 
 function Lista(){
 
 const api = process.env.REACT_APP_API_URL
 
 const [usuarios, setUsuarios] = useState([]);
+const [userSelected, setUserSelected] = useState(null)
 
 useEffect(()=>{
     axios.get(api)
@@ -16,7 +17,23 @@ useEffect(()=>{
     })
 }, [])
 
-    return(
+const confirmDelete = () =>{
+    axios.delete(`${api}/${userSelected.id}`)
+    .then(()=>{
+        setUserSelected(null)
+    })
+    .catch(error=>{
+        alert("error ao apagar usuario:")
+    })
+}
+
+const cancelDelete =() => {
+setUserSelected(null);
+}
+
+
+
+return(
         <div className="containerList">
             
             <div className="title">
@@ -27,6 +44,7 @@ useEffect(()=>{
                 <p>Nome:</p>
                 <p>Sobrenome</p>
                 <p>Telefone:</p>
+                <p> </p>
             </div>
 
             <ul>
@@ -36,15 +54,14 @@ useEffect(()=>{
                         <p>
                         {user.nome}
                         </p>
-
                         <p>
                         {user.sobrenome}
                         </p>
-                        
                         <p>
                         {user.telefone}
                         </p>
-
+                        <button className="btEditar">Editar</button>
+                        <button className="btDelete" onClick={()=> userSelected(user)}>Excluir</button>
                     </div>
                 </li>
             ))}
@@ -55,6 +72,9 @@ useEffect(()=>{
             <Link to='/'>Retornar ao Registro</Link>
                 </div>
             </div>
+            {userSelected && (
+                <deleteUser/>
+            )}
         </div>
     )
 }
