@@ -70,6 +70,23 @@ p {
 .userItem{
   display: flex;
   justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.btEditar{
+  background-color: yellow;
+  color: white;
+  font-size: 12px;
+  padding: 5px;
+  border-radius: 50px;
+}
+
+.btDelete{ 
+  background-color: red;
+  color: white;
+  font-size: 12px;
+  padding: 5px;
+  border-radius: 50px;
 }
 
 ul{
