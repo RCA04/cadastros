@@ -27,6 +27,7 @@ useEffect(()=>{
                 <p>Nome:</p>
                 <p>Sobrenome</p>
                 <p>Telefone:</p>
+                <p> </p>
             </div>
 
             <ul>
@@ -36,15 +37,14 @@ useEffect(()=>{
                         <p>
                         {user.nome}
                         </p>
-
                         <p>
                         {user.sobrenome}
                         </p>
-                        
                         <p>
                         {user.telefone}
                         </p>
-
+                        <button className="btEditar">Editar</button>
+                        <button className="btDelete">Excluir</button>
                     </div>
                 </li>
             ))}
