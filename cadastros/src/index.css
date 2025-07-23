@@ -73,8 +73,8 @@ p {
   margin-bottom: 10px;
 }
 
-.btEditar{
-  background-color: yellow;
+.btDetails{
+  background-color: #00bcd4;
   color: white;
   font-size: 12px;
   padding: 5px;
