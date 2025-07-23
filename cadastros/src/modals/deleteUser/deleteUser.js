@@ -1,7 +1,7 @@
 import React from "react";
 
 
-const deleteUSer =(user)=>{
+function deleteUSer(user){
     return(
         <div>
         <p>Tem Certeza que deseja exluir o usuario: {user.nome} {user.sobrenome}? </p>
