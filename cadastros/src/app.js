@@ -3,7 +3,7 @@ import { BrowserRouter as Router , Routes, Route } from "react-router-dom";
 
 import Registro from "./registro";
 import Lista from "./lista";
-import UserDetails from './userDetails';
+import UserDetails from './pages/userDetails';
 
 function App(){
     return(
