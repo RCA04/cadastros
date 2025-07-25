@@ -43,9 +43,10 @@ return(
 
             <div className="listTitles">
                 <p>Nome:</p>
-                <p>Sobrenome</p>
+                <p>Sobrenome:</p>
                 <p>Telefone:</p>
-                <p> </p>
+                <p></p>
+                <p></p>
             </div>
 
             <ul>
