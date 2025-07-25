@@ -1,7 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import deleteUSer from "./modals/deleteUser/deleteUser";
 
 function Lista(){
 
@@ -44,9 +43,10 @@ return(
 
             <div className="listTitles">
                 <p>Nome:</p>
-                <p>Sobrenome</p>
+                <p>Sobrenome:</p>
                 <p>Telefone:</p>
-                <p> </p>
+                <p></p>
+                <p></p>
             </div>
 
             <ul>

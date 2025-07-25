@@ -1,0 +1,22 @@
+.userInfos li{
+
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.buttonsDetailsUsers {
+    display: flex;
+    justify-content: space-between;
+}
+
+.buttonsDetailsUsers button:first-child{
+  background-color: yellow;
+  color: white;
+}
+
+.buttonsDetailsUsers button:last-child{
+    background-color: red;
+  color: white;
+
+}

@@ -136,7 +136,7 @@ required
 </form>
 
 <div className="buttonLink">
-  <Link to='/usuarios'>Visualizar usuários cadastrados</Link>
+  <Link to='/usuarios'>Lista de Usuários</Link>
 </div>
 
 {mensagem && <p>{mensagem}</p>}
