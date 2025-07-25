@@ -71,23 +71,19 @@ p {
   display: flex;
   justify-content: space-between;
   margin-bottom: 10px;
+  border-bottom: solid 2px #e6e6e6;
 }
 
 .btDetails{
   background-color: #00bcd4;
   color: white;
   font-size: 12px;
+  margin-bottom: 3px;
   padding: 5px;
   border-radius: 50px;
 }
 
-.btDelete{ 
-  background-color: red;
-  color: white;
-  font-size: 12px;
-  padding: 5px;
-  border-radius: 50px;
-}
+
 
 ul{
   list-style-type: none;
@@ -130,7 +126,10 @@ ul{
   border-radius: 3px;
   background-color: #00bcd4;
   transition: background-color 1s, border 1s, box-shadow 1s ;
-  margin-top: 10px;
+  margin-top: 15px;
+  padding: 5px 10px;
+  font-size: 16px;
+  text-align: center;
 }
 
 .buttonLink:hover{
