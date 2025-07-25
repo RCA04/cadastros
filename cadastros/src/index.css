@@ -158,3 +158,12 @@ ul{
   text-decoration: none;
   color: #fff;
 }
+
+.buttonDetailsUsers button:first-child{
+  background-color: red;
+  color: white;
+}
+
+.buttonDetailsUsers button:last-child{
+
+}
