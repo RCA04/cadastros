@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import {useParams, Link, useNavigate} from "react-router-dom";
 import DeleteUser from "../../modals/deleteUser";
 import EditUser from "../../modals/editUSer";
+import './index.css'
 
 
 function UserDetails(){
@@ -48,20 +49,39 @@ function UserDetails(){
     return(
     <div className="container">
       <Link to="/usuarios">
-        <button className="returnToList">Voltar à Lista</button>
+        <button className="returnToList">Retornar</button>
       </Link>
       <h2>Detalhes do Usuário</h2>
-      <p><strong>ID:</strong> {user.id}</p>
-      <p><strong>Nome:</strong> {user.nome}</p>
-      <p><strong>Sobrenome:</strong> {user.sobrenome}</p>
-      <p><strong>Telefone:</strong> {user.telefone}</p>
-      <p><strong>CPF:</strong> {user.cpf}</p>
+      <div className="userInfos">
+        <ul>
+          <li>
+      <p><strong>ID:</strong></p>
+      <p>{user.id}</p>
+          </li>
+          <li>
+      <p><strong>Nome:</strong></p>
+      <p> {user.nome}</p>
+          </li>
+          <li>
+      <p><strong>Sobrenome:</strong> </p>
+      <p>{user.sobrenome}</p>
+          </li>
+          <li>
+      <p><strong>Telefone:</strong></p>
+      <p>{user.telefone}</p>
+          </li>
+          <li>
+      <p><strong>CPF:</strong> </p>
+      <p>{user.cpf}</p>
+          </li>
+        </ul>
+      </div>
 
         <div className="buttonsDetailsUsers">
-        <button onClick={()=> setShowDeleteModal(true)}>
+        <button  onClick={()=> setShowDeleteModal(true)}>
         Excluir
         </button>
-        <button onClick={()=> setShowEditModal(true)}>
+        <button  onClick={()=> setShowEditModal(true)}>
         Editar
         </button>
         </div>
