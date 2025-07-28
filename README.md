@@ -9,7 +9,6 @@ Projeto de estudo sobre CRUD, tem como foco de modo simples entender como fazer 
 ## Pré-requisitos
 - Node
 - Npm
-- Laravel
 
 ## Instalação
 - git clone https://github.com/RCA04/cadastros.git
